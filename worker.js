@@ -283,8 +283,8 @@ const pricingData = [
   {"company": "DeepSeek", "model": "DeepSeek-V4-Flash", "input": "¥1.0", "output": "¥2.0", "note": "缓存命中时输入仅需 ¥0.02/百万"},
   {"company": "百度", "model": "Ernie-5.1 (旗舰)", "input": "¥30.0", "output": "¥90.0", "note": "百度千帆大模型平台旗舰定价"},
   {"company": "字节跳动", "model": "Doubao-Seed-2.0-Pro", "input": "¥0.8", "output": "¥2.0", "note": "延续火山引擎的“击穿底价”策略"},
-  {"company": "小米", "model": "MiMo-V2.5-Pro", "input": "¥15.0", "output": "¥45.0", "note": "主打端云协同生态应用"},
-  {"company": "腾讯", "model": "Hunyuan 3 (混元)", "input": "¥30.0", "output": "¥100.0", "note": "面向政企及高复杂应用场景"}
+  {"company": "腾讯", "model": "Hunyuan 3 (混元)", "input": "¥30.0", "output": "¥100.0", "note": "面向政企及高复杂应用场景"},
+  {"company": "Meta", "model": "Muse Spark 1.1", "input": "¥9.0 ($1.25)", "output": "¥30.6 ($4.25)", "note": "26年7月发布，具备 1M 上下文及智能体能力"}
 ];
 
 const plansData = [
