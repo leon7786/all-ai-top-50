@@ -91,7 +91,7 @@ body {
     </div>
 
     <!-- Main Layout (Full height flex with internal scroll) -->
-    <div class="flex-1 grid grid-cols-1 xl:grid-cols-[40%_60%] gap-6 min-h-0">
+    <div class="flex-1 grid grid-cols-1 xl:grid-cols-[33%_67%] gap-6 min-h-0">
         
         <!-- Left Column: Top 50 -->
         <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col min-h-0 relative overflow-hidden">
@@ -103,10 +103,10 @@ body {
                 <table class="w-full text-sm">
                     <thead class="[&_tr]:border-b sticky top-0 bg-card/95 backdrop-blur z-10 shadow-sm">
                         <tr class="text-muted-foreground">
-                            <th class="h-8 px-4 text-center font-medium w-[15%]">排名</th>
-                            <th class="h-8 px-4 text-center font-medium w-[25%]">厂商</th>
-                            <th class="h-8 px-4 text-center font-medium w-[40%]">模型名称</th>
-                            <th class="h-8 px-4 text-center font-medium w-[20%]">综合 Score</th>
+                            <th class="h-8 px-2 text-center font-medium w-12">排名</th>
+                            <th class="h-8 px-2 text-center font-medium w-24">厂商</th>
+                            <th class="h-8 px-2 text-center font-medium w-auto">模型名称</th>
+                            <th class="h-8 px-2 text-center font-medium w-20">综合 Score</th>
                         </tr>
                     </thead>
                     <tbody id="top50-tbody" class="[&_tr:last-child]:border-0">
@@ -328,15 +328,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const logoHtml = \`<img src="\${getLogoUrl(item.company)}" class="w-5 h-5 rounded-md shrink-0 bg-white shadow-sm" alt="logo" onerror="this.style.display='none'">\`;
 
         tr.innerHTML = \`
-            <td class="py-1.5 px-3 align-middle text-center">\${rankBadge}</td>
-            <td class="py-1.5 px-3 align-middle">
-                <a href="https://\${companyDomains[item.company] || 'ai.com'}" target="_blank" class="flex justify-center items-center gap-2.5 hover:opacity-80 transition-opacity" title="访问 \${item.company} 官网">
+            <td class="py-1.5 px-2 align-middle text-center">\${rankBadge}</td>
+            <td class="py-1.5 px-2 align-middle">
+                <a href="https://\${companyDomains[item.company] || 'ai.com'}" target="_blank" class="flex justify-center items-center gap-2 hover:opacity-80 transition-opacity" title="访问 \${item.company} 官网">
                     \${logoHtml}
                     <span class="font-bold text-foreground text-xs tracking-wide uppercase hover:underline cursor-pointer">\${item.company}</span>
                 </a>
             </td>
-            <td class="py-1.5 px-3 align-middle text-center font-semibold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('\${item.model}', this)">\${item.model}</td>
-            <td class="py-1.5 px-3 align-middle text-center font-mono text-[11px] font-medium">\${item.score}</td>
+            <td class="py-1.5 px-2 align-middle text-center font-semibold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('\${item.model}', this)">\${item.model}</td>
+            <td class="py-1.5 px-2 align-middle text-center font-mono text-[11px] font-medium">\${item.score}</td>
         \`;
         top50Tbody.appendChild(tr);
     });
