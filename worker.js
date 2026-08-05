@@ -80,8 +80,8 @@ body {
 
 </style>
 </head>
-<body class="bg-background text-foreground h-screen w-screen flex flex-col p-4 md:p-6 gap-6 overflow-hidden">
-    
+<body class="bg-background text-foreground h-screen w-full flex flex-col items-center overflow-hidden">
+    <div class="w-full max-w-screen-2xl h-full flex flex-col p-4 md:p-6 gap-6 min-h-0">
     <!-- Header -->
     <div class="flex justify-between items-end shrink-0 px-2">
         <div>
@@ -140,6 +140,7 @@ body {
             </div>
         </div>
 
+    </div>
     </div>
 
     <script>
