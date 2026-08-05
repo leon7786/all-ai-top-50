@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     top50Data.forEach(item => {
         const tr = document.createElement('tr');
-        tr.className = "border-b border-muted/30 hover:bg-muted/30 transition-colors";
+        tr.className = "border-b border-slate-200/60 table-row-hover";
         
         let rankBadge = `<span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold text-muted-foreground bg-muted">${item.rank}</span>`;
         if (item.rank === 1) rankBadge = `<span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold text-yellow-800 bg-yellow-300 shadow-sm">1</span>`;
@@ -151,14 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (item.region !== currentRegion) {
             currentRegion = item.region;
             const sepTr = document.createElement('tr');
-            sepTr.className = "bg-muted/80 backdrop-blur font-bold text-foreground text-[13px] border-b border-muted shadow-sm sticky top-8 z-10";
-            sepTr.innerHTML = `<td colspan="6" class="py-2 px-6"><div class="flex items-center gap-2"><span class="w-1.5 h-4 bg-primary rounded-full"></span>${currentRegion} <span class="text-xs font-normal text-muted-foreground ml-2">(已按各厂最高模型能力排行)</span></div></td>`;
+            sepTr.className = "bg-white/60 backdrop-blur-md font-bold text-slate-800 text-[13px] border-b border-slate-200/80 shadow-[0_4px_10px_rgba(0,0,0,0.02)] sticky top-8 z-10";
+            sepTr.innerHTML = `<td colspan="6" class="py-2.5 px-6"><div class="flex items-center gap-2"><span class="w-1.5 h-4 bg-blue-500 rounded-full"></span>${currentRegion} <span class="text-xs font-normal text-slate-500 ml-2">(已按各厂最高模型能力排行)</span></div></td>`;
             unifiedTbody.appendChild(sepTr);
         }
 
         const tr = document.createElement('tr');
         const bgClass = companyColors[item.company] || "bg-transparent";
-        tr.className = `border-b border-muted/30 hover:bg-muted/50 transition-colors ${bgClass}`;
+        tr.className = `border-b border-slate-200/50 table-row-hover ${bgClass}`;
         
         const typeBadge = item.type === "API" 
             ? `<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">API</span>`
