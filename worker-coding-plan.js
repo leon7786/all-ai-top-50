@@ -6,15 +6,15 @@ export default {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 全球 AI 编程订阅终极指南</title>
+    <title>全球 AI 大模型排行与 Coding Plan 价格指南</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="2026年全球各大AI大模型厂商（OpenAI, Anthropic, 智谱Z.ai, 月之暗面等）面向开发者的 Coding Plan（编程订阅套餐）全景评测与价格价值横评。为使用 Cursor、Cline 等工具的极客开发者提供最强算力避坑指南。">
+    <meta name="description" content="全球各大AI大模型厂商（OpenAI, Anthropic, 智谱Z.ai, 月之暗面等）面向开发者的 Coding Plan（编程订阅套餐）全景评测与价格价值横评。为使用 Cursor、Cline 等工具的极客开发者提供最强算力避坑指南。">
     <meta name="keywords" content="AI大模型, 编程大模型, Coding Plan, ChatGPT Pro, Claude Max, 智谱GLM, API计费, 代码补全, 价格对比, AI选型指南">
     <meta name="author" content="leon7786">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="2026 全球 AI 编程订阅终极指南 - 深度价值评测">
+    <meta property="og:title" content="全球 AI 大模型排行与 Coding Plan 价格指南 - 深度价值评测">
     <meta property="og:description" content="全网最硬核的 AI 代码大模型与开发者订阅套餐横向评测，帮你选出最适合的编程算力方案。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://github.com/leon7786/all-ai-top-50">
@@ -22,7 +22,7 @@ export default {
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="2026 全球 AI 编程订阅终极指南">
+    <meta name="twitter:title" content="全球 AI 大模型排行与 Coding Plan 价格指南">
     <meta name="twitter:description" content="深入对比各大 AI 厂商的 Coding Plan 实际价值。">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>@tailwind base;
@@ -84,7 +84,7 @@ export default {
     <!-- Sidebar -->
     <aside class="w-64 border-r bg-card flex flex-col h-full shrink-0">
         <div class="h-14 border-b flex items-center px-4 shrink-0">
-            <h1 class="font-bold text-sm tracking-tight truncate">AI 编程订阅终极指南</h1>
+            <h1 class="font-bold text-sm tracking-tight truncate" title="全球 AI 排行与 Coding Plan 价格指南">全球 AI 排行与 Coding Plan 指南</h1>
         </div>
         <div class="flex-1 overflow-y-auto p-4 custom-scrollbar">
             <nav id="sidebar-nav" class="space-y-1">
@@ -92,7 +92,7 @@ export default {
             </nav>
         </div>
         <div class="p-4 border-t text-xs text-muted-foreground">
-            © 2026 AI Insights
+            © AI Insights
         </div>
     </aside>
 
@@ -114,7 +114,7 @@ export default {
     title: "1. 为什么需要 Coding Plan？",
     content: `
       <h2>Coding Plan 爆发的背景</h2>
-      <p class="my-3">在 2026 年，随着 Cursor、Cline、Claude Code 等 AI 辅助编程工具的全面普及，开发者对大模型 API 的调用量呈现指数级增长。传统的按 Token 计费模式（Pay-as-you-go）在面对高频代码补全和重构任务时，账单极易失控。</p>
+      <p class="my-3">随着 Cursor、Cline、Claude Code 等 AI 辅助编程工具的全面普及，开发者对大模型 API 的调用量呈现指数级增长。传统的按 Token 计费模式（Pay-as-you-go）在面对高频代码补全和重构任务时，账单极易失控。</p>
       <p class="my-3">因此，各大头部 AI 厂商纷纷推出了面向开发者的 <strong>Coding Plan（编程订阅套餐）</strong>，通过预付费或额度倍增的模式，为极客和企业开发者提供更具性价比的算力包。</p>
       <hr class="my-6">
       <h3>核心评测指标</h3>
@@ -208,7 +208,7 @@ export default {
     title: "4. Z.ai (智谱) - 国内开发者福音",
     content: `
       <h2>Z.ai: GLM Coding Plan</h2>
-      <p class="my-3">作为国内模型的领军者，智谱针对开发者推出的 GLM Coding Plan 是 2026 年市场的破局者，通过极低的网络延迟和专属编程模型赢得了大量用户。</p>
+      <p class="my-3">作为国内模型的领军者，智谱针对开发者推出的 GLM Coding Plan 是市场的破局者，通过极低的网络延迟和专属编程模型赢得了大量用户。</p>
       <h3 class="mt-6 mb-2">套餐详解</h3>
       <div class="overflow-x-auto my-4 rounded-lg border">
         <table class="w-full text-sm border-collapse">
@@ -271,7 +271,7 @@ export default {
           <p class="text-xs mt-1 text-slate-600/80 dark:text-slate-500">充值 50 块钱能用一个月，配合开源的本地插件，击穿底价。</p>
         </div>
       </div>
-      <p class="text-sm text-muted-foreground mt-8 text-center border-t pt-4">© 2026 AI Top 50 Dashboard - Coding Plan Insights</p>
+      <p class="text-sm text-muted-foreground mt-8 text-center border-t pt-4">© AI Top 50 Dashboard - Coding Plan Insights</p>
     `
   }
 ];

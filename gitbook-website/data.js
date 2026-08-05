@@ -4,7 +4,7 @@ export const bookData = [
     title: "1. 为什么需要 Coding Plan？",
     content: `
       <h2>Coding Plan 爆发的背景</h2>
-      <p class="my-3">在 2026 年，随着 Cursor、Cline、Claude Code 等 AI 辅助编程工具的全面普及，开发者对大模型 API 的调用量呈现指数级增长。传统的按 Token 计费模式（Pay-as-you-go）在面对高频代码补全和重构任务时，账单极易失控。</p>
+      <p class="my-3">随着 Cursor、Cline、Claude Code 等 AI 辅助编程工具的全面普及，开发者对大模型 API 的调用量呈现指数级增长。传统的按 Token 计费模式（Pay-as-you-go）在面对高频代码补全和重构任务时，账单极易失控。</p>
       <p class="my-3">因此，各大头部 AI 厂商纷纷推出了面向开发者的 <strong>Coding Plan（编程订阅套餐）</strong>，通过预付费或额度倍增的模式，为极客和企业开发者提供更具性价比的算力包。</p>
       <hr class="my-6">
       <h3>核心评测指标</h3>
@@ -98,7 +98,7 @@ export const bookData = [
     title: "4. Z.ai (智谱) - 国内开发者福音",
     content: `
       <h2>Z.ai: GLM Coding Plan</h2>
-      <p class="my-3">作为国内模型的领军者，智谱针对开发者推出的 GLM Coding Plan 是 2026 年市场的破局者，通过极低的网络延迟和专属编程模型赢得了大量用户。</p>
+      <p class="my-3">作为国内模型的领军者，智谱针对开发者推出的 GLM Coding Plan 是市场的破局者，通过极低的网络延迟和专属编程模型赢得了大量用户。</p>
       <h3 class="mt-6 mb-2">套餐详解</h3>
       <div class="overflow-x-auto my-4 rounded-lg border">
         <table class="w-full text-sm border-collapse">
@@ -161,7 +161,7 @@ export const bookData = [
           <p class="text-xs mt-1 text-slate-600/80 dark:text-slate-500">充值 50 块钱能用一个月，配合开源的本地插件，击穿底价。</p>
         </div>
       </div>
-      <p class="text-sm text-muted-foreground mt-8 text-center border-t pt-4">© 2026 AI Top 50 Dashboard - Coding Plan Insights</p>
+      <p class="text-sm text-muted-foreground mt-8 text-center border-t pt-4">© AI Top 50 Dashboard - Coding Plan Insights</p>
     `
   }
 ];
