@@ -7,24 +7,6 @@
 
 ---
 
-## 📖 项目简介
-
-**All AI Top 50** 是一个专为 AI 开发者、研究人员及极客设计的综合性前沿数据看板平台。本项目汇聚了截至 2026 年下半年全球最强的前 50 款大语言模型（LLM）能力排名，并独家盘点了国内外各大顶级 AI 厂商（OpenAI, Anthropic, Google, 阿里, 腾讯, Moonshot 等）的 API 计费清单与订阅套餐全景。
-
-## ✨ 核心特性
-
-- **极致现代 UI (Glassmorphism)**
-  抛弃传统枯燥的数据表，底层基于 TailwindCSS 打造，具备全屏后台极光 Mesh 流动渐变、优雅的毛玻璃（Glassmorphism）悬浮卡片、以及丝滑的行级悬停微动效。对 2K/4K 大屏进行专属拥挤度优化，体验极佳。
-  
-- **全自动 CI/CD 数据流 (Data Pipeline)**
-  摆脱手动更新！项目内置了一套工业级的 **GitHub Actions** 流水线。
-  - **自动巡检**：每天 UTC 凌晨 2 点（北京时间上午 10 点）准时唤醒服务器。
-  - **智能穿透**：底层采用官方 `gradio_client` SDK 绕过常规的反爬手段，直通 Hugging Face Space，拉取并解析最新 LMSYS Chatbot Arena Leaderboard 排行榜数据（Pandas DataFrame）。
-  - **自动化部署**：更新完成后，由 Python 脚本在云端重构静态前端代码，并自动发布到 `gh-pages` 分支。真正的“零维护”无人值守！
-
-- **数据与表现分离**
-  所有核心数据均采用最原始、轻量的 Markdown (`.md`) 格式存储。搭配自研的 `build_worker.py`，随时将 MD 转换为前台精美的 JavaScript Array 数据。
-
 ## 🏆 全球最强 AI 模型能力排名 Top 50
 
 *由 GitHub Actions 每日凌晨自动同步自 LMSYS Leaderboard*
@@ -85,6 +67,25 @@
 | 49 | deepseek-v4-pro | DeepSeek | 1458 ±4 |
 | 50 | glm-5 | Z.ai | 1457 ±4 |
 <!-- TOP50_END -->
+
+## 📖 项目简介
+
+**All AI Top 50** 是一个专为 AI 开发者、研究人员及极客设计的综合性前沿数据看板平台。本项目汇聚了截至 2026 年下半年全球最强的前 50 款大语言模型（LLM）能力排名，并独家盘点了国内外各大顶级 AI 厂商（OpenAI, Anthropic, Google, 阿里, 腾讯, Moonshot 等）的 API 计费清单与订阅套餐全景。
+
+## ✨ 核心特性
+
+- **极致现代 UI (Glassmorphism)**
+  抛弃传统枯燥的数据表，底层基于 TailwindCSS 打造，具备全屏后台极光 Mesh 流动渐变、优雅的毛玻璃（Glassmorphism）悬浮卡片、以及丝滑的行级悬停微动效。对 2K/4K 大屏进行专属拥挤度优化，体验极佳。
+  
+- **全自动 CI/CD 数据流 (Data Pipeline)**
+  摆脱手动更新！项目内置了一套工业级的 **GitHub Actions** 流水线。
+  - **自动巡检**：每天 UTC 凌晨 2 点（北京时间上午 10 点）准时唤醒服务器。
+  - **智能穿透**：底层采用官方 `gradio_client` SDK 绕过常规的反爬手段，直通 Hugging Face Space，拉取并解析最新 LMSYS Chatbot Arena Leaderboard 排行榜数据（Pandas DataFrame）。
+  - **自动化部署**：更新完成后，由 Python 脚本在云端重构静态前端代码，并自动发布到 `gh-pages` 分支。真正的“零维护”无人值守！
+
+- **数据与表现分离**
+  所有核心数据均采用最原始、轻量的 Markdown (`.md`) 格式存储。搭配自研的 `build_worker.py`，随时将 MD 转换为前台精美的 JavaScript Array 数据。
+
 
 ## 🛠️ 技术栈
 
