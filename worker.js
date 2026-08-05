@@ -128,7 +128,7 @@ body {
                             <th class="h-8 px-6 text-left font-medium">厂商</th>
                             <th class="h-8 px-4 text-left font-medium w-20">类型</th>
                             <th class="h-8 px-4 text-left font-medium">产品 / 模型</th>
-                            <th class="h-8 px-4 text-right font-medium whitespace-nowrap">输入 (¥/1M)</th>
+                            <th class="h-8 px-4 text-left font-medium whitespace-nowrap">输入 (¥/1M)</th>
                             <th class="h-8 px-4 text-left font-medium whitespace-nowrap">输出 / 月租</th>
                             <th class="h-8 px-6 text-left font-medium max-w-[250px]">核心权益 / 备注</th>
                         </tr>
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </td>
             <td class="py-1.5 px-3 align-middle">\${typeBadge}</td>
             <td class="py-1.5 px-3 align-middle font-bold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('\${item.product}', this)">\${item.product}</td>
-            <td class="py-1.5 px-3 align-middle text-right font-semibold text-emerald-600 whitespace-nowrap text-xs">\${item.input}</td>
+            <td class="py-1.5 px-3 align-middle text-left font-semibold text-emerald-600 whitespace-nowrap text-xs">\${item.input}</td>
             <td class="py-1.5 px-3 align-middle text-left font-semibold text-rose-600 whitespace-nowrap text-xs">\${item.output}</td>
             <td class="py-1.5 px-4 align-middle text-muted-foreground text-xs max-w-[280px] leading-snug">\${item.note}</td>
         \`;
