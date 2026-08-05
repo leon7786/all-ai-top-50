@@ -1,6 +1,6 @@
 # 👉 [在线体验：访问 AI 枢纽 2026 数据看板](https://leon7786.github.io/all-ai-top-50/) 👈
 
-# 🌐 全球顶级大模型全景图 (All AI Top 50)
+# 🌐 全球大模型 AI 排行 | 编程订阅 token / Coding Plan 价格指南
 
 [![GitHub Pages](https://img.shields.io/badge/部署在-GitHub%20Pages-blue)](https://leon7786.github.io/all-ai-top-50/)
 [![Data Sync](https://github.com/leon7786/all-ai-top-50/actions/workflows/daily-sync.yml/badge.svg)](https://github.com/leon7786/all-ai-top-50/actions/workflows/daily-sync.yml)
