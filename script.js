@@ -72,15 +72,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const logoHtml = `<img src="${getLogoUrl(item.company)}" class="w-5 h-5 rounded-md shrink-0 bg-white shadow-sm" alt="logo" onerror="this.style.display='none'">`;
 
         tr.innerHTML = `
-            <td class="py-1.5 px-3 align-middle text-center">${rankBadge}</td>
-            <td class="py-1.5 px-3 align-middle">
-                <a href="https://${companyDomains[item.company] || 'ai.com'}" target="_blank" class="flex justify-center items-center gap-2.5 hover:opacity-80 transition-opacity" title="访问 ${item.company} 官网">
+            <td class="py-1.5 px-2 align-middle text-center">${rankBadge}</td>
+            <td class="py-1.5 px-2 align-middle">
+                <a href="https://${companyDomains[item.company] || 'ai.com'}" target="_blank" class="flex justify-center items-center gap-2 hover:opacity-80 transition-opacity" title="访问 ${item.company} 官网">
                     ${logoHtml}
                     <span class="font-bold text-foreground text-xs tracking-wide uppercase hover:underline cursor-pointer">${item.company}</span>
                 </a>
             </td>
-            <td class="py-1.5 px-3 align-middle text-center font-semibold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('${item.model}', this)">${item.model}</td>
-            <td class="py-1.5 px-3 align-middle text-center font-mono text-[11px] font-medium">${item.score}</td>
+            <td class="py-1.5 px-2 align-middle text-center font-semibold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('${item.model}', this)">${item.model}</td>
+            <td class="py-1.5 px-2 align-middle text-center font-mono text-[11px] font-medium">${item.score}</td>
         `;
         top50Tbody.appendChild(tr);
     });
