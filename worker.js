@@ -104,9 +104,9 @@ body {
                     <thead class="[&_tr]:border-b sticky top-0 bg-card/95 backdrop-blur z-10 shadow-sm">
                         <tr class="text-muted-foreground">
                             <th class="h-8 px-2 text-center font-medium w-12">排名</th>
-                            <th class="h-8 px-2 text-center font-medium w-24">厂商</th>
-                            <th class="h-8 px-2 text-center font-medium w-auto">模型名称</th>
-                            <th class="h-8 px-2 text-center font-medium w-20">综合 Score</th>
+                            <th class="h-8 px-2 text-left font-medium w-24">厂商</th>
+                            <th class="h-8 px-2 text-left font-medium w-auto">模型名称</th>
+                            <th class="h-8 px-2 text-left font-medium w-20">综合 Score</th>
                         </tr>
                     </thead>
                     <tbody id="top50-tbody" class="[&_tr:last-child]:border-0">
@@ -330,13 +330,13 @@ document.addEventListener('DOMContentLoaded', () => {
         tr.innerHTML = \`
             <td class="py-1.5 px-2 align-middle text-center">\${rankBadge}</td>
             <td class="py-1.5 px-2 align-middle">
-                <a href="https://\${companyDomains[item.company] || 'ai.com'}" target="_blank" class="flex justify-center items-center gap-2 hover:opacity-80 transition-opacity" title="访问 \${item.company} 官网">
+                <a href="https://\${companyDomains[item.company] || 'ai.com'}" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition-opacity" title="访问 \${item.company} 官网">
                     \${logoHtml}
                     <span class="font-bold text-foreground text-xs tracking-wide uppercase hover:underline cursor-pointer">\${item.company}</span>
                 </a>
             </td>
-            <td class="py-1.5 px-2 align-middle text-center font-semibold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('\${item.model}', this)">\${item.model}</td>
-            <td class="py-1.5 px-2 align-middle text-center font-mono text-[11px] font-medium">\${item.score}</td>
+            <td class="py-1.5 px-2 align-middle text-left font-semibold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('\${item.model}', this)">\${item.model}</td>
+            <td class="py-1.5 px-2 align-middle text-left font-mono text-[11px] font-medium">\${item.score}</td>
         \`;
         top50Tbody.appendChild(tr);
     });
