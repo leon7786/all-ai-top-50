@@ -112,22 +112,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Sort by company so their API and Plans are grouped together
-    const companyOrder = ["OpenAI", "Anthropic", "Google", "xAI", "阿里", "Moonshot", "Z.ai", "MiniMax", "DeepSeek", "百度", "字节跳动", "小米", "腾讯", "Meta"];
+    // Sort by Region -> Capability Rank -> Company -> Type
+    const domesticList = ["阿里", "Moonshot", "Z.ai", "MiniMax", "DeepSeek", "百度", "字节跳动", "小米", "腾讯"];
+    const companyBestRank = {};
+    top50Data.forEach(item => {
+        if (!companyBestRank[item.company] || item.rank < companyBestRank[item.company]) {
+            companyBestRank[item.company] = item.rank;
+        }
+    });
+
+    unifiedData.forEach(item => {
+        item.region = domesticList.includes(item.company) ? "国内大模型厂商" : "国际顶级 AI 厂商";
+        item.bestRank = companyBestRank[item.company] || 999;
+    });
+
     unifiedData.sort((a, b) => {
-        let indexA = companyOrder.indexOf(a.company);
-        let indexB = companyOrder.indexOf(b.company);
-        if(indexA === -1) indexA = 99;
-        if(indexB === -1) indexB = 99;
-        
-        if (indexA !== indexB) return indexA - indexB;
-        // Same company, put APIs first, then Plans
+        // 1. Region
+        if (a.region !== b.region) {
+            return a.region === "国际顶级 AI 厂商" ? -1 : 1;
+        }
+        // 2. Capability (bestRank)
+        if (a.bestRank !== b.bestRank) {
+            return a.bestRank - b.bestRank;
+        }
+        // 3. Keep APIs and Plans of the same company together
+        if (a.company !== b.company) {
+            return a.company.localeCompare(b.company);
+        }
+        // 4. Type (API first)
         if (a.type !== b.type) return a.type === "API" ? -1 : 1;
         return 0;
     });
 
     const unifiedTbody = document.getElementById('unified-pricing-tbody');
+    let currentRegion = "";
+
     unifiedData.forEach(item => {
+        if (item.region !== currentRegion) {
+            currentRegion = item.region;
+            const sepTr = document.createElement('tr');
+            sepTr.className = "bg-muted/80 backdrop-blur font-bold text-foreground text-[13px] border-b border-muted shadow-sm sticky top-8 z-10";
+            sepTr.innerHTML = `<td colspan="6" class="py-2 px-6"><div class="flex items-center gap-2"><span class="w-1.5 h-4 bg-primary rounded-full"></span>${currentRegion} <span class="text-xs font-normal text-muted-foreground ml-2">(已按各厂最高模型能力排行)</span></div></td>`;
+            unifiedTbody.appendChild(sepTr);
+        }
+
         const tr = document.createElement('tr');
         const bgClass = companyColors[item.company] || "bg-transparent";
         tr.className = `border-b border-muted/30 hover:bg-muted/50 transition-colors ${bgClass}`;
