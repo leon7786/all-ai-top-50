@@ -1,6 +1,6 @@
-# 全球大模型AI排行 · 编程订阅 token/ Coding Plan 价格指南
+# 🔗 在线数据看板：[https://leon7786.github.io/all-ai-top-50/](https://leon7786.github.io/all-ai-top-50/)
 
-🔗 **在线数据看板**：[https://leon7786.github.io/all-ai-top-50/](https://leon7786.github.io/all-ai-top-50/)
+## 全球大模型AI排行 · 编程订阅 token/ Coding Plan 价格指南
 
 [![GitHub Pages](https://img.shields.io/badge/部署在-GitHub%20Pages-blue)](https://leon7786.github.io/all-ai-top-50/)
 [![Data Sync](https://github.com/leon7786/all-ai-top-50/actions/workflows/daily-sync.yml/badge.svg)](https://github.com/leon7786/all-ai-top-50/actions/workflows/daily-sync.yml)
