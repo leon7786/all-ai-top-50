@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="py-1.5 px-3 align-middle">${typeBadge}</td>
             <td class="py-1.5 px-3 align-middle font-bold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('${item.product}', this)">${item.product}</td>
             <td class="py-1.5 px-3 align-middle text-right font-semibold text-emerald-600 whitespace-nowrap text-xs">${item.input}</td>
-            <td class="py-1.5 px-3 align-middle text-right font-semibold text-rose-600 whitespace-nowrap text-xs">${item.output}</td>
+            <td class="py-1.5 px-3 align-middle text-left font-semibold text-rose-600 whitespace-nowrap text-xs">${item.output}</td>
             <td class="py-1.5 px-4 align-middle text-muted-foreground text-xs max-w-[280px] leading-snug">${item.note}</td>
         `;
         unifiedTbody.appendChild(tr);
