@@ -3,56 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全球 AI 大模型排行与 Coding Plan 价格指南</title>
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="全球各大AI大模型厂商（OpenAI, Anthropic, 智谱Z.ai, 月之暗面等）面向开发者的 Coding Plan（编程订阅套餐）全景评测与价格价值横评。为使用 Cursor、Cline 等工具的极客开发者提供最强算力避坑指南。">
-    <meta name="keywords" content="AI大模型, 编程大模型, Coding Plan, ChatGPT Pro, Claude Max, 智谱GLM, API计费, 代码补全, 价格对比, AI选型指南">
-    <meta name="author" content="leon7786">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="全球 AI 大模型排行与 Coding Plan 价格指南 - 深度价值评测">
-    <meta property="og:description" content="全网最硬核的 AI 代码大模型与开发者订阅套餐横向评测，帮你选出最适合的编程算力方案。">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://github.com/leon7786/all-ai-top-50">
-    <meta property="og:site_name" content="AI Coding Plan Insights">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="全球 AI 大模型排行与 Coding Plan 价格指南">
-    <meta name="twitter:description" content="深入对比各大 AI 厂商的 Coding Plan 实际价值。">
+    <title>AI大模型深度报告 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))" },
+              secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+              destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+              muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+              accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+              card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+            }
+          }
+        }
+      }
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-background text-foreground antialiased font-sans flex h-screen overflow-hidden">
+<body class="bg-background text-foreground h-screen w-screen flex flex-col p-4 md:p-6 gap-6 overflow-hidden">
     
-    <!-- Sidebar -->
-    <aside class="w-64 border-r bg-card flex flex-col h-full shrink-0">
-        <div class="h-14 border-b flex items-center px-4 shrink-0">
-            <h1 class="font-bold text-sm tracking-tight truncate" title="全球 AI 排行与 Coding Plan 价格指南">全球 AI 排行与 Coding Plan 指南</h1>
+    <!-- Header -->
+    <div class="flex justify-between items-end shrink-0 px-2">
+        <div>
+            <h1 class="text-3xl font-extrabold tracking-tight">AI 枢纽 2026：全球顶级大模型全景图</h1>
+            <p class="text-sm text-muted-foreground mt-2 font-medium">数据截至2026下半年 | 综合排名与资费全景概览</p>
         </div>
-        <div class="flex-1 overflow-y-auto p-4 custom-scrollbar">
-            <nav id="sidebar-nav" class="space-y-1">
-                <!-- Nav items inserted by JS -->
-            </nav>
-        </div>
-        <div class="p-4 border-t text-xs text-muted-foreground">
-            © AI Insights
-        </div>
-    </aside>
+    </div>
 
-    <!-- Main Content -->
-    <main class="flex-1 flex flex-col h-full bg-background overflow-hidden relative">
-        <div class="h-14 border-b bg-card/50 backdrop-blur flex items-center px-6 shrink-0 z-10 sticky top-0">
-            <h2 id="content-title" class="font-semibold text-lg">加载中...</h2>
-        </div>
+    <!-- Main Layout (Full height flex with internal scroll) -->
+    <div class="flex-1 grid grid-cols-1 xl:grid-cols-[40%_60%] gap-6 min-h-0">
         
-        <div id="main-content" class="flex-1 overflow-y-auto custom-scrollbar p-6 md:p-10 max-w-4xl mx-auto w-full prose prose-sm md:prose-base dark:prose-invert prose-headings:font-bold prose-a:text-primary">
-            <!-- Content inserted by JS -->
+        <!-- Left Column: Top 50 -->
+        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col min-h-0 relative overflow-hidden">
+            <div class="px-6 py-4 border-b shrink-0 bg-muted/10 backdrop-blur-sm z-20 flex justify-between items-center">
+                <h3 class="text-lg font-bold">🏆 全球最强 AI 模型综合能力排名（截至2026下半年）</h3>
+                <a href="https://huggingface.co/spaces/lmarena-ai/arena-leaderboard" target="_blank" class="text-[10px] text-muted-foreground hover:text-foreground bg-muted px-2 py-1 rounded shadow-sm border transition-colors hover:bg-muted/80" title="访问 LMSYS Leaderboard">来源：arena-leaderboard</a>
+            </div>
+            <div class="flex-1 overflow-y-auto custom-scrollbar relative z-0">
+                <table class="w-full text-sm">
+                    <thead class="[&_tr]:border-b sticky top-0 bg-card/95 backdrop-blur z-10 shadow-sm">
+                        <tr class="text-muted-foreground">
+                            <th class="h-8 px-4 text-left font-medium w-16">排名</th>
+                            <th class="h-8 px-4 text-left font-medium w-28">厂商</th>
+                            <th class="h-8 px-4 text-left font-medium w-auto">模型名称</th>
+                            <th class="h-8 px-4 text-left font-medium w-full">综合 Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="top50-tbody" class="[&_tr:last-child]:border-0">
+                        <!-- JS Inject -->
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </main>
 
-    <!-- Type Module -->
+        <!-- Right Column: Unified Pricing & Plans -->
+        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col min-h-0 relative overflow-hidden">
+            <div class="px-6 py-4 border-b shrink-0 bg-muted/10 backdrop-blur-sm z-20">
+                <h3 class="text-lg font-bold">💳 API 计费 & 订阅套餐总览</h3>
+            </div>
+            <div class="flex-1 overflow-y-auto custom-scrollbar relative z-0">
+                <table class="w-full text-sm">
+                    <thead class="[&_tr]:border-b sticky top-0 bg-card/95 backdrop-blur z-10 shadow-sm">
+                        <tr class="text-muted-foreground">
+                            <th class="h-8 px-6 text-left font-medium">厂商</th>
+                            <th class="h-8 px-4 text-left font-medium w-20">类型</th>
+                            <th class="h-8 px-4 text-left font-medium">产品 / 模型</th>
+                            <th class="h-8 px-4 text-right font-medium whitespace-nowrap">输入 (¥/1M)</th>
+                            <th class="h-8 px-4 text-right font-medium whitespace-nowrap">输出 / 月租</th>
+                            <th class="h-8 px-6 text-left font-medium max-w-[250px]">核心权益 / 备注</th>
+                        </tr>
+                    </thead>
+                    <tbody id="unified-pricing-tbody" class="[&_tr:last-child]:border-0">
+                        <!-- JS Inject -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
     <script type="module" src="script.js"></script>
 </body>
 </html>

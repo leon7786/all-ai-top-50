@@ -1,43 +1,59 @@
 import os
 
-def build_worker():
-    # Read files
-    with open('index.html', 'r', encoding='utf-8') as f:
-        html_content = f.read()
-    with open('style.css', 'r', encoding='utf-8') as f:
-        css_content = f.read()
-    with open('data.js', 'r', encoding='utf-8') as f:
-        data_js_content = f.read()
-    with open('script.js', 'r', encoding='utf-8') as f:
-        script_js_content = f.read()
+html_path = 'index.html'
+css_path = 'style.css'
+data_path = 'data.js'
+script_path = 'script.js'
 
-    # Remove the import line from script.js to inline it
-    script_js_content = script_js_content.replace("import { bookData } from './data.js';", "")
+with open(html_path, 'r', encoding='utf-8') as f:
+    html_content = f.read()
 
-    # Inject CSS
-    html_content = html_content.replace('<link rel="stylesheet" href="style.css">', f'<style>{css_content}</style>')
-    
-    # Inject JS
-    combined_js = f"{data_js_content}\n\n{script_js_content}"
-    html_content = html_content.replace('<script type="module" src="script.js"></script>', f'<script>{combined_js}</script>')
+with open(css_path, 'r', encoding='utf-8') as f:
+    css_content = f.read()
 
-    # Wrap in Cloudflare Worker template
-    worker_template = f"""
-export default {{
+with open(data_path, 'r', encoding='utf-8') as f:
+    data_content = f.read()
+    # Remove exports to make it standard JS inside <script>
+    data_content = data_content.replace('export const', 'const')
+
+with open(script_path, 'r', encoding='utf-8') as f:
+    script_content = f.read()
+    # Remove imports
+    lines = script_content.split('\n')
+    script_content = '\n'.join([line for line in lines if not line.strip().startswith('import')])
+
+# Inject CSS
+css_tag = '<link rel="stylesheet" href="style.css">'
+html_with_css = html_content.replace(css_tag, f'<style>\n{css_content}\n</style>')
+
+# Inject JS
+js_tag = '<script type="module" src="script.js"></script>'
+injected_js = f'<script>\n{data_content}\n\n{script_content}\n</script>'
+final_html = html_with_css.replace(js_tag, injected_js)
+
+# Create a readable multi-line template literal
+escaped_lines = []
+for line in final_html.split('\n'):
+    # Escape backslashes, backticks, and template expressions
+    line = line.replace('\\', '\\\\').replace('`', '\\`').replace('${', '\\${')
+    escaped_lines.append(line)
+
+html_literal = '`' + '\n'.join(escaped_lines) + '`'
+
+worker_code = f"""export default {{
   async fetch(request, env, ctx) {{
-    const html = `{html_content}`;
+    const html = {html_literal};
 
     return new Response(html, {{
-      headers: {{ 'Content-Type': 'text/html;charset=UTF-8' }},
+      headers: {{
+        "content-type": "text/html;charset=UTF-8",
+      }},
     }});
   }},
 }};
 """
 
-    with open('../worker-coding-plan.js', 'w', encoding='utf-8') as f:
-        f.write(worker_template)
-        
-    print("worker-coding-plan.js successfully created at /root/1CT-Share/20260805-ai-top-50/worker-coding-plan.js")
+with open('../worker.js', 'w', encoding='utf-8') as f:
+    f.write(worker_code)
 
-if __name__ == '__main__':
-    build_worker()
+print("worker.js successfully created at /root/1CT-Share/20260805-ai-top-50/worker.js")
