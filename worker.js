@@ -88,14 +88,11 @@ h1, h2, h3, .font-outfit {
 
 /* Smooth Table Row Hover */
 .table-row-hover {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease-out;
 }
 .table-row-hover:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transform: translateY(-1px) scale(1.002);
-  z-index: 10;
-  position: relative;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 /* Gradient Text for Main Title */
@@ -159,7 +156,7 @@ h1, h2, h3, .font-outfit {
     </div>
 
     <!-- Main Layout (Full height flex with internal scroll) -->
-    <div class="flex-1 grid grid-cols-1 xl:grid-cols-[33%_67%] gap-6 min-h-0">
+    <div class="flex-1 grid grid-cols-1 xl:grid-cols-[40%_60%] gap-6 min-h-0">
         
         <!-- Left Column: Top 50 -->
         <div class="glass-card rounded-2xl text-card-foreground flex flex-col min-h-0 relative overflow-hidden animate-fade-in delay-100">

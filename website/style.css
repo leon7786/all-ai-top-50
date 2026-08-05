@@ -56,14 +56,11 @@ h1, h2, h3, .font-outfit {
 
 /* Smooth Table Row Hover */
 .table-row-hover {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease-out;
 }
 .table-row-hover:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transform: translateY(-1px) scale(1.002);
-  z-index: 10;
-  position: relative;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 /* Gradient Text for Main Title */
