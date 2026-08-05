@@ -17,7 +17,9 @@ README_MD_PATH = os.path.join(ROOT_DIR, "README.md")
 
 def update_readme_md(data_list):
     """提取数据并组装 Markdown 表格，注入到 README.md 中"""
-    md_table = "| 排名 | 模型 | 厂商 | Score |\n| :---: | :--- | :--- | :--- |\n"
+    current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+    md_table = f"> **最新数据同步时间**: `{current_time}`\n\n"
+    md_table += "| 排名 | 模型 | 厂商 | Score |\n| :---: | :--- | :--- | :--- |\n"
     for item in data_list:
         md_table += f"| {item['rank']} | {item['model']} | {item['company']} | {item['score']} |\n"
     

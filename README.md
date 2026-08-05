@@ -30,6 +30,8 @@
 *由 GitHub Actions 每日凌晨自动同步自 LMSYS Leaderboard*
 
 <!-- TOP50_START -->
+> **最新数据同步时间**: `2026-08-05 10:10:24 UTC`
+
 | 排名 | 模型 | 厂商 | Score |
 | :---: | :--- | :--- | :--- |
 | 1 | claude-fable-5 | Anthropic | 1509 ±6 |
