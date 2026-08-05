@@ -13,6 +13,22 @@ logger = logging.getLogger(__name__)
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOP50_MD_PATH = os.path.join(ROOT_DIR, "top50.md")
 DATA_JS_PATH = os.path.join(ROOT_DIR, "website", "data.js")
+README_MD_PATH = os.path.join(ROOT_DIR, "README.md")
+
+def update_readme_md(data_list):
+    """提取数据并组装 Markdown 表格，注入到 README.md 中"""
+    md_table = "| 排名 | 模型 | 厂商 | Score |\n| :---: | :--- | :--- | :--- |\n"
+    for item in data_list:
+        md_table += f"| {item['rank']} | {item['model']} | {item['company']} | {item['score']} |\n"
+    
+    with open(README_MD_PATH, 'r', encoding='utf-8') as f:
+        readme = f.read()
+
+    new_readme = re.sub(r"<!-- TOP50_START -->.*?<!-- TOP50_END -->", f"<!-- TOP50_START -->\n{md_table}<!-- TOP50_END -->", readme, flags=re.DOTALL)
+
+    with open(README_MD_PATH, 'w', encoding='utf-8') as f:
+        f.write(new_readme)
+    logger.info(f"成功覆写文件: {README_MD_PATH}")
 
 def update_top50_md(data_list):
     """根据爬取的最新 JSON 数组，重新生成 top50.md 榜单文件"""
@@ -101,6 +117,7 @@ def sync_lmsys():
             
         update_top50_md(top50_list)
         update_data_js(top50_list)
+        update_readme_md(top50_list)
         
         logger.info("LMSYS Arena Leaderboard 每日同步与重写完成！")
         

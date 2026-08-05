@@ -25,6 +25,65 @@
 - **数据与表现分离**
   所有核心数据均采用最原始、轻量的 Markdown (`.md`) 格式存储。搭配自研的 `build_worker.py`，随时将 MD 转换为前台精美的 JavaScript Array 数据。
 
+## 🏆 全球最强 AI 模型能力排名 Top 50
+
+*由 GitHub Actions 每日凌晨自动同步自 LMSYS Leaderboard*
+
+<!-- TOP50_START -->
+| 排名 | 模型 | 厂商 | Score |
+| :---: | :--- | :--- | :--- |
+| 1 | claude-fable-5 | Anthropic | 1509 ±6 |
+| 2 | claude-opus-4-6-thinking | Anthropic | 1505 ±4 |
+| 3 | claude-opus-4-7-thinking | Anthropic | 1502 ±4 |
+| 4 | claude-opus-4-6 | Anthropic | 1497 ±4 |
+| 5 | qwen3.8-max | 阿里 | 1496 ±10 |
+| 6 | claude-opus-4-7 | Anthropic | 1492 ±4 |
+| 7 | claude-opus-5-high | Anthropic | 1492 ±6 |
+| 8 | claude-opus-5-max | Anthropic | 1490 ±9 |
+| 9 | muse-spark-1.1 | Meta | 1490 ±6 |
+| 10 | muse-spark | Meta | 1488 ±6 |
+| 11 | gemini-3-pro | Google | 1486 ±4 |
+| 12 | gemini-3.1-pro-preview | Google | 1485 ±3 |
+| 13 | kimi-k3-max | Moonshot | 1485 ±10 |
+| 14 | claude-opus-4-8-thinking | Anthropic | 1484 ±5 |
+| 15 | gpt-5.6-sol-xhigh | OpenAI | 1483 ±6 |
+| 16 | gemini-3.6-flash | Google | 1483 ±7 |
+| 17 | gpt-5.5-high | OpenAI | 1482 ±4 |
+| 18 | gpt-5.4-high | OpenAI | 1477 ±4 |
+| 19 | gemini-3.6-flash-high | Google | 1476 ±7 |
+| 20 | gpt-5.5 | OpenAI | 1476 ±4 |
+| 21 | gpt-5.2-chat-latest-20260210 | OpenAI | 1476 ±4 |
+| 22 | gemini-3.6-flash-lite | Google | 1475 ±6 |
+| 23 | qwen3.7-max-preview | 阿里 | 1475 ±10 |
+| 24 | claude-opus-4-8 | Anthropic | 1475 ±5 |
+| 25 | grok-4.20-beta1 | xAI | 1474 ±5 |
+| 26 | gemini-3.6-flash-medium | Google | 1474 ±5 |
+| 27 | gpt-5.5-instant | OpenAI | 1473 ±5 |
+| 28 | gemini-3-flash | Google | 1473 ±4 |
+| 29 | claude-opus-4-5-20251101-thinking-32k | Anthropic | 1473 ±4 |
+| 30 | grok-4.20-beta-0309-reasoning | xAI | 1472 ±4 |
+| 31 | claude-sonnet-4-6 | Anthropic | 1472 ±4 |
+| 32 | grok-4.20-multi-agent-beta-0309 | xAI | 1471 ±4 |
+| 33 | glm-5.2-max | Z.ai | 1469 ±5 |
+| 34 | claude-opus-4-5-20251101 | Anthropic | 1469 ±3 |
+| 35 | grok-4.5 | xAI | 1469 ±6 |
+| 36 | glm-5.1 | Z.ai | 1469 ±4 |
+| 37 | gpt-5.6-terra-xhigh | OpenAI | 1468 ±6 |
+| 38 | ernie-5.1 | 百度 | 1468 ±5 |
+| 39 | grok-4.1-thinking | xAI | 1466 ±3 |
+| 40 | mimo-v2.5-pro | 小米 | 1466 ±4 |
+| 41 | gpt-5.4 | OpenAI | 1465 ±4 |
+| 42 | qwen3.5-max-preview | 阿里 | 1465 ±5 |
+| 43 | claude-sonnet-5-high | Anthropic | 1462 ±6 |
+| 44 | kimi-k2.6 | Moonshot | 1461 ±5 |
+| 45 | qwen3.6-max-preview | 阿里 | 1460 ±8 |
+| 46 | grok-4.1 | xAI | 1459 ±3 |
+| 47 | qwen3.7-plus | 阿里 | 1459 ±5 |
+| 48 | gemini-3-flash (thinking-minimal) | Google | 1459 ±3 |
+| 49 | deepseek-v4-pro | DeepSeek | 1458 ±4 |
+| 50 | glm-5 | Z.ai | 1457 ±4 |
+<!-- TOP50_END -->
+
 ## 🛠️ 技术栈
 
 - **前端 UI**: HTML5 + Vanilla JS + **Tailwind CSS** (CDN)
