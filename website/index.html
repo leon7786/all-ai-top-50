@@ -30,11 +30,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-background text-foreground h-screen w-full flex flex-col items-center overflow-hidden">
-    <div class="w-full max-w-screen-2xl h-full flex flex-col p-4 md:p-6 gap-6 min-h-0">
+    <div class="bg-animated"></div>
+    <div class="w-full max-w-screen-2xl h-full flex flex-col p-4 md:p-6 md:py-8 gap-6 min-h-0">
     <!-- Header -->
-    <div class="flex justify-between items-end shrink-0 px-2">
+    <div class="flex justify-between items-end shrink-0 px-2 animate-fade-in">
         <div>
-            <h1 class="text-3xl font-extrabold tracking-tight">AI 枢纽 2026：全球顶级大模型全景图</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gradient pb-1">AI 枢纽 2026：全球顶级大模型全景图</h1>
             <p class="text-sm text-muted-foreground mt-2 font-medium">数据截至2026下半年 | 综合排名与资费全景概览</p>
         </div>
     </div>
@@ -43,9 +44,9 @@
     <div class="flex-1 grid grid-cols-1 xl:grid-cols-[33%_67%] gap-6 min-h-0">
         
         <!-- Left Column: Top 50 -->
-        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col min-h-0 relative overflow-hidden">
-            <div class="px-6 py-4 border-b shrink-0 bg-muted/10 backdrop-blur-sm z-20 flex justify-between items-center">
-                <h3 class="text-lg font-bold">🏆 全球最强 AI 模型综合能力排名（截至2026下半年）</h3>
+        <div class="glass-card rounded-2xl text-card-foreground flex flex-col min-h-0 relative overflow-hidden animate-fade-in delay-100">
+            <div class="px-6 py-5 border-b border-white/40 shrink-0 bg-white/40 z-20 flex justify-between items-center">
+                <h3 class="text-lg font-bold font-outfit text-slate-800">🏆 全球最强 AI 模型综合能力排名</h3>
                 <a href="https://huggingface.co/spaces/lmarena-ai/arena-leaderboard" target="_blank" class="text-[10px] text-muted-foreground hover:text-foreground bg-muted px-2 py-1 rounded shadow-sm border transition-colors hover:bg-muted/80" title="访问 LMSYS Leaderboard">来源：arena-leaderboard</a>
             </div>
             <div class="flex-1 overflow-y-auto custom-scrollbar relative z-0">
@@ -66,9 +67,9 @@
         </div>
 
         <!-- Right Column: Unified Pricing & Plans -->
-        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col min-h-0 relative overflow-hidden">
-            <div class="px-6 py-4 border-b shrink-0 bg-muted/10 backdrop-blur-sm z-20">
-                <h3 class="text-lg font-bold">💳 API 计费 & 订阅套餐总览</h3>
+        <div class="glass-card rounded-2xl text-card-foreground flex flex-col min-h-0 relative overflow-hidden animate-fade-in delay-200">
+            <div class="px-6 py-5 border-b border-white/40 shrink-0 bg-white/40 z-20">
+                <h3 class="text-lg font-bold font-outfit text-slate-800">💳 API 计费 & 订阅套餐总览</h3>
             </div>
             <div class="flex-1 overflow-y-auto custom-scrollbar relative z-0">
                 <table class="w-full text-sm">

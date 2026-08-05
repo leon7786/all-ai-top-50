@@ -30,39 +30,90 @@ export default {
       }
     </script>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800;900&display=swap');
 
 :root {
   --background: 210 40% 98%;
   --foreground: 222.2 84% 4.9%;
   --card: 0 0% 100%;
   --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
   --primary: 221.2 83.2% 53.3%;
   --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
   --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 221.2 83.2% 53.3%;
-  --radius: 0.75rem;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   -webkit-font-smoothing: antialiased;
+  background-color: #f8fafc;
 }
 
-/* Custom Scrollbar for sleek UI */
+/* Animated Mesh Gradient Background */
+.bg-animated {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -1;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(199, 210, 254, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(252, 231, 243, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(186, 230, 253, 0.45) 0%, transparent 40%);
+  background-size: 100% 100%;
+  animation: bgShift 15s ease-in-out infinite alternate;
+}
+
+@keyframes bgShift {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1) translate(2%, 2%); }
+  100% { transform: scale(1) translate(-2%, -2%); }
+}
+
+h1, h2, h3, .font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Premium Glassmorphism Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.05), 
+    0 10px 15px -3px rgba(0, 0, 0, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Smooth Table Row Hover */
+.table-row-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.table-row-hover:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transform: translateY(-1px) scale(1.002);
+  z-index: 10;
+  position: relative;
+}
+
+/* Gradient Text for Main Title */
+.text-gradient {
+  background: linear-gradient(135deg, #2563eb, #8b5cf6, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientText 5s ease infinite;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -71,21 +122,38 @@ body {
   background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: hsl(var(--border));
+  background: rgba(0,0,0,0.12);
   border-radius: 9999px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground));
+  background: rgba(0,0,0,0.25);
+}
+
+/* Staggered Entry Animation */
+.animate-fade-in {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 </style>
 </head>
 <body class="bg-background text-foreground h-screen w-full flex flex-col items-center overflow-hidden">
-    <div class="w-full max-w-screen-2xl h-full flex flex-col p-4 md:p-6 gap-6 min-h-0">
+    <div class="bg-animated"></div>
+    <div class="w-full max-w-screen-2xl h-full flex flex-col p-4 md:p-6 md:py-8 gap-6 min-h-0">
     <!-- Header -->
-    <div class="flex justify-between items-end shrink-0 px-2">
+    <div class="flex justify-between items-end shrink-0 px-2 animate-fade-in">
         <div>
-            <h1 class="text-3xl font-extrabold tracking-tight">AI 枢纽 2026：全球顶级大模型全景图</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gradient pb-1">AI 枢纽 2026：全球顶级大模型全景图</h1>
             <p class="text-sm text-muted-foreground mt-2 font-medium">数据截至2026下半年 | 综合排名与资费全景概览</p>
         </div>
     </div>
@@ -94,9 +162,9 @@ body {
     <div class="flex-1 grid grid-cols-1 xl:grid-cols-[33%_67%] gap-6 min-h-0">
         
         <!-- Left Column: Top 50 -->
-        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col min-h-0 relative overflow-hidden">
-            <div class="px-6 py-4 border-b shrink-0 bg-muted/10 backdrop-blur-sm z-20 flex justify-between items-center">
-                <h3 class="text-lg font-bold">🏆 全球最强 AI 模型综合能力排名（截至2026下半年）</h3>
+        <div class="glass-card rounded-2xl text-card-foreground flex flex-col min-h-0 relative overflow-hidden animate-fade-in delay-100">
+            <div class="px-6 py-5 border-b border-white/40 shrink-0 bg-white/40 z-20 flex justify-between items-center">
+                <h3 class="text-lg font-bold font-outfit text-slate-800">🏆 全球最强 AI 模型综合能力排名</h3>
                 <a href="https://huggingface.co/spaces/lmarena-ai/arena-leaderboard" target="_blank" class="text-[10px] text-muted-foreground hover:text-foreground bg-muted px-2 py-1 rounded shadow-sm border transition-colors hover:bg-muted/80" title="访问 LMSYS Leaderboard">来源：arena-leaderboard</a>
             </div>
             <div class="flex-1 overflow-y-auto custom-scrollbar relative z-0">
@@ -117,9 +185,9 @@ body {
         </div>
 
         <!-- Right Column: Unified Pricing & Plans -->
-        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col min-h-0 relative overflow-hidden">
-            <div class="px-6 py-4 border-b shrink-0 bg-muted/10 backdrop-blur-sm z-20">
-                <h3 class="text-lg font-bold">💳 API 计费 & 订阅套餐总览</h3>
+        <div class="glass-card rounded-2xl text-card-foreground flex flex-col min-h-0 relative overflow-hidden animate-fade-in delay-200">
+            <div class="px-6 py-5 border-b border-white/40 shrink-0 bg-white/40 z-20">
+                <h3 class="text-lg font-bold font-outfit text-slate-800">💳 API 计费 & 订阅套餐总览</h3>
             </div>
             <div class="flex-1 overflow-y-auto custom-scrollbar relative z-0">
                 <table class="w-full text-sm">
@@ -319,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     top50Data.forEach(item => {
         const tr = document.createElement('tr');
-        tr.className = "border-b border-muted/30 hover:bg-muted/30 transition-colors";
+        tr.className = "border-b border-slate-200/60 table-row-hover";
         
         let rankBadge = \`<span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold text-muted-foreground bg-muted">\${item.rank}</span>\`;
         if (item.rank === 1) rankBadge = \`<span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold text-yellow-800 bg-yellow-300 shadow-sm">1</span>\`;
@@ -408,14 +476,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (item.region !== currentRegion) {
             currentRegion = item.region;
             const sepTr = document.createElement('tr');
-            sepTr.className = "bg-muted/80 backdrop-blur font-bold text-foreground text-[13px] border-b border-muted shadow-sm sticky top-8 z-10";
-            sepTr.innerHTML = \`<td colspan="6" class="py-2 px-6"><div class="flex items-center gap-2"><span class="w-1.5 h-4 bg-primary rounded-full"></span>\${currentRegion} <span class="text-xs font-normal text-muted-foreground ml-2">(已按各厂最高模型能力排行)</span></div></td>\`;
+            sepTr.className = "bg-white/60 backdrop-blur-md font-bold text-slate-800 text-[13px] border-b border-slate-200/80 shadow-[0_4px_10px_rgba(0,0,0,0.02)] sticky top-8 z-10";
+            sepTr.innerHTML = \`<td colspan="6" class="py-2.5 px-6"><div class="flex items-center gap-2"><span class="w-1.5 h-4 bg-blue-500 rounded-full"></span>\${currentRegion} <span class="text-xs font-normal text-slate-500 ml-2">(已按各厂最高模型能力排行)</span></div></td>\`;
             unifiedTbody.appendChild(sepTr);
         }
 
         const tr = document.createElement('tr');
         const bgClass = companyColors[item.company] || "bg-transparent";
-        tr.className = \`border-b border-muted/30 hover:bg-muted/50 transition-colors \${bgClass}\`;
+        tr.className = \`border-b border-slate-200/50 table-row-hover \${bgClass}\`;
         
         const typeBadge = item.type === "API" 
             ? \`<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">API</span>\`
