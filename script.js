@@ -72,15 +72,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const logoHtml = `<img src="${getLogoUrl(item.company)}" class="w-5 h-5 rounded-md shrink-0 bg-white shadow-sm" alt="logo" onerror="this.style.display='none'">`;
 
         tr.innerHTML = `
-            <td class="py-1.5 px-2 align-middle text-center">${rankBadge}</td>
-            <td class="py-1.5 px-2 align-middle">
+            <td class="py-1.5 px-4 align-middle text-center whitespace-nowrap w-max">${rankBadge}</td>
+            <td class="py-1.5 px-4 align-middle whitespace-nowrap w-max">
                 <a href="https://${companyDomains[item.company] || 'ai.com'}" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition-opacity" title="访问 ${item.company} 官网">
                     ${logoHtml}
                     <span class="font-bold text-foreground text-xs tracking-wide uppercase hover:underline cursor-pointer">${item.company}</span>
                 </a>
             </td>
-            <td class="py-1.5 px-2 align-middle text-left font-semibold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('${item.model}', this)">${item.model}</td>
-            <td class="py-1.5 px-2 align-middle text-left font-mono text-[11px] font-medium">${item.score}</td>
+            <td class="py-1.5 px-4 align-middle text-left font-semibold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity whitespace-nowrap w-max" title="点击复制" onclick="copyToClipboard('${item.model}', this)">${item.model}</td>
+            <td class="py-1.5 px-4 align-middle text-left font-mono text-[11px] font-medium whitespace-nowrap w-max">${item.score}</td>
+            <td class="w-full"></td>
         `;
         top50Tbody.appendChild(tr);
     });
@@ -167,17 +168,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const logoHtml = `<img src="${getLogoUrl(item.company)}" class="w-6 h-6 rounded-md shrink-0 bg-white shadow-sm" alt="logo" onerror="this.style.display='none'">`;
 
         tr.innerHTML = `
-            <td class="py-1.5 px-4 align-middle">
+            <td class="py-1.5 px-4 align-middle whitespace-nowrap w-max">
                 <a href="https://${companyDomains[item.company] || 'ai.com'}" target="_blank" class="flex items-center gap-2.5 hover:opacity-80 transition-opacity" title="访问 ${item.company} 官网">
                     ${logoHtml}
                     <span class="font-bold text-xs uppercase tracking-wide text-foreground hover:underline cursor-pointer">${item.company}</span>
                 </a>
             </td>
-            <td class="py-1.5 px-3 align-middle">${typeBadge}</td>
-            <td class="py-1.5 px-3 align-middle font-bold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity" title="点击复制" onclick="copyToClipboard('${item.product}', this)">${item.product}</td>
-            <td class="py-1.5 px-3 align-middle text-left font-semibold text-emerald-600 whitespace-nowrap text-xs">${item.input}</td>
-            <td class="py-1.5 px-3 align-middle text-left font-semibold text-rose-600 whitespace-nowrap text-xs">${item.output}</td>
-            <td class="py-1.5 px-4 align-middle text-muted-foreground text-xs max-w-[280px] leading-snug">${item.note}</td>
+            <td class="py-1.5 px-4 align-middle whitespace-nowrap w-max">${typeBadge}</td>
+            <td class="py-1.5 px-4 align-middle font-bold text-primary text-xs cursor-pointer hover:opacity-70 transition-opacity whitespace-nowrap w-max" title="点击复制" onclick="copyToClipboard('${item.product}', this)">${item.product}</td>
+            <td class="py-1.5 px-4 align-middle text-left font-semibold text-emerald-600 whitespace-nowrap text-xs w-max">${item.input}</td>
+            <td class="py-1.5 px-4 align-middle text-left font-semibold text-rose-600 whitespace-nowrap text-xs w-max">${item.output}</td>
+            <td class="py-1.5 px-4 align-middle text-muted-foreground text-xs w-full leading-snug">${item.note}</td>
         `;
         unifiedTbody.appendChild(tr);
     });
