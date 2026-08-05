@@ -72,11 +72,7 @@ export const pricingData = [
   {"company": "百度", "model": "Ernie-5.1 (旗舰)", "input": "¥30.0", "output": "¥90.0", "note": "百度千帆大模型平台旗舰定价"},
   {"company": "字节跳动", "model": "Doubao-Seed-2.0-Pro", "input": "¥0.8", "output": "¥2.0", "note": "延续火山引擎的“击穿底价”策略"},
   {"company": "小米", "model": "MiMo-V2.5-Pro", "input": "¥15.0", "output": "¥45.0", "note": "主打端云协同生态应用"},
-  {"company": "腾讯", "model": "Hunyuan 3 (混元)", "input": "¥30.0", "output": "¥100.0", "note": "面向政企及高复杂应用场景"},
-  {"company": "MiniMax", "model": "abab 7.5", "input": "¥10.0", "output": "¥30.0", "note": "极致语音多模态及万字长文解析"},
-  {"company": "Z.ai", "model": "GLM-5.2-Flash", "input": "¥0.1", "output": "¥0.5", "note": "零延迟边缘设备首选模型"},
-  {"company": "Moonshot", "model": "Kimi K3-Pro", "input": "¥8.0", "output": "¥30.0", "note": "日常高速交互与代码生成"},
-  {"company": "Meta", "model": "Muse Spark", "input": "¥9.0", "output": "¥30.6", "note": "Meta 最新闭源主力前沿模型"}
+  {"company": "腾讯", "model": "Hunyuan 3 (混元)", "input": "¥30.0", "output": "¥100.0", "note": "面向政企及高复杂应用场景"}
 ];
 
 export const plansData = [
