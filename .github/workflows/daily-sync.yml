@@ -49,3 +49,4 @@
               rm -rf website/
               git add .
               git diff --quiet && git diff --staged --quiet || (git commit -m "sync: auto-deploy updated data to gh-pages" && git push origin gh-pages)
+              
